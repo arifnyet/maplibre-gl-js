@@ -71,14 +71,14 @@ export class LngLatBounds {
             if (sw.length === 4) {
             // 4 element array: west, south, east, north
                 this.setSouthWest([sw[0], sw[1]]).setNorthEast([sw[2], sw[3]]);
-            } if (sw.length == 2){
+            } else{
               this.setSouthWest(sw[0] as LngLatLike).setNorthEast(sw[1] as LngLatLike);
             }
-            else {
+            
+        }else {
               // @ts-ignore
             this.setSouthWest(sw._sw as LngLatLike).setNorthEast(sw._ne as LngLatLike);
             }
-        }
     }
 
     /**
